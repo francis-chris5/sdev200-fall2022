@@ -33,7 +33,7 @@ public class GetData extends HttpServlet {
             }
         }
         catch(Exception e){
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }//end doGet()
 
@@ -71,14 +71,20 @@ public class GetData extends HttpServlet {
     
     
     public static String makeJSON(Person[] people){
-        String json = "";
-        for(Person person : people){
+        String json = "{\"people\": [";
+        for(int i=0; i<people.length; i++){
             json += "{";
-            json += "\"name\": \"" + person.getName() + "\", ";
-            json += "\"age\": " + person.getAge() + ", ";
-            json += "\"home\": \"" + person.getHome() + "\"";
-            json += "}\n";
+            json += "\"name\": \"" + people[i].getName() + "\", ";
+            json += "\"age\": " + people[i].getAge() + ", ";
+            json += "\"home\": \"" + people[i].getHome() + "\"";
+            if(i != people.length-1){
+                json += "},";
+            }
+            else{
+                json += "}";
+            }
         }
+        json += "]}";
         return json;
     }//end makeJSON()
     
@@ -88,7 +94,7 @@ public class GetData extends HttpServlet {
         //File file = new File("C:\\Users\\franc\\Downloads\\test-data.csv");
         
         try{
-            //InputStream stream = new URL("").openStream();
+            //File file = new File("C:\\Users\\franc\\Documents\\NetBeansProjects\\DynamicWebPage\\test-data.csv");
             File file = new File("/var/www/data/test-data.csv");
             String rawContent = new String();
             //Scanner open = new Scanner(file);
@@ -114,7 +120,7 @@ public class GetData extends HttpServlet {
             return people;
         }
         catch(Exception e){
-            e.printStackTrace();
+            //e.printStackTrace();
             return null;
         }
     }//end readCSV()
