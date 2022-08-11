@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cloud Functions</title>
+	<script src="ajax.js"></script>
+</head>
+<body>
+	<h3>Ajax to Servlet Test Page</h3>
+	<p>Just a quick example of retrieving some data from the server dynamically using AJAX and Java Servlets on a Tomcat server.</p>
+
+	<br><br>
+        <h2>The Static Portion</h2>
+	<p>Choose some form elements to not change after request</p>
+	<section>
+		<p>Text: <input type="text"/></p>
+		<p>Color: <input type="color"/></p>
+		<p>Number: <input type="number" value="0" step="1"/></p>
+	</section>
+	<br>
+
+	<h2>The Dynamic Portion</h2>
+	<p>For this example the servlet is pulling data from a csv file and sending it back with both XML and JSON formats.</p>
+        <p>Both seem to be about the same when metrics are run, and neither is hard to work with on the client side, I guess I prefer XML just a little because t's a markup language so there's more consistency with the rest of the Javascript code running client side after we get the data. In general though, I set up applications to return xml, json, csv, and a custom/unique format for compatibility with other software.</p>
+	<section>
+		<p>Here's the output from the xml format of the response <button onclick="XMLData()">Get</button></p>
+		<article id="xmlOutput">
+                    <p>data coming soon...</p>
+		</article>
+		
+	</section>
+
+	<section>
+		<p>Here's the output from the json format of the response <button onclick="jsonData()">Get</button></p>
+                <article id="jsonOutput">
+                    <p>data coming soon...</p>
+		</article>
+		
+	</section>
+</body>
+</html>
