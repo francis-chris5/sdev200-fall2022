@@ -19,6 +19,24 @@ public class Primitives {
         char startOfAlphebet = 'A';
         String someWords = "Hello World";
         
+        //math: + - * / %
+        
+        //division
+        
+        int x, y;
+        double w, v;
+        
+        x = 4;
+        y = 3;
+        w = 2.34;
+        v = 5.76;
+        
+        System.out.println(x/y);
+        System.out.println(w/v);
+        System.out.println(x/w);
+        System.out.println(x/3.0); //if you want fractional part include decimals
+        
+        
         System.out.println("8 bits of data to store " + b1 + ".");
         System.out.println("16 bits of data to store " + s1);
         System.out.println("32 bits of data to store " + i);
