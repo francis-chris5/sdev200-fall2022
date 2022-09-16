@@ -1,0 +1,42 @@
+run:
+Bob	hours: 32
+	Thu Sep 15 20:17:10 EDT 2022
+Employee Name	Net Pay	Deductions	Gross Pay
+Bob		$750.40	$142.58		$607.82
+
+
+
+
+Sally	hours: 43
+	Thu Sep 15 20:17:51 EDT 2022
+Employee Name	Net Pay	Deductions	Gross Pay
+Sally		$2,071.10	$538.48		$1,532.61
+
+
+
+
+Becky	hours: 38
+	Thu Sep 15 20:25:17 EDT 2022
+Employee Name	Net Pay	Deductions	Gross Pay
+Becky		$969.76	$223.04		$746.72
+
+
+
+
+David	hours: 21
+	Thu Sep 15 20:25:23 EDT 2022
+Employee Name	Net Pay	Deductions	Gross Pay
+David		$417.27	$62.59		$354.68
+
+
+
+
+Mary	hours: 49
+	Thu Sep 15 20:25:29 EDT 2022
+Employee Name	Net Pay	Deductions	Gross Pay
+Mary		$2,195.45	$526.91		$1,668.54
+
+
+
+
+BUILD SUCCESSFUL (total time: 8 minutes 23 seconds)
