@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="18.0.2" class="java.beans.XMLDecoder">
+ <object class="objectexample2.Vehicle">
+  <void property="color">
+   <string>Green</string>
+  </void>
+  <void property="make">
+   <string>Toyota</string>
+  </void>
+  <void property="manufacturingPlant">
+   <string>Georgetown</string>
+  </void>
+  <void property="model">
+   <string>Corolla</string>
+  </void>
+  <void property="year">
+   <int>2002</int>
+  </void>
+ </object>
+</java>
