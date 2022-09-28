@@ -3,7 +3,11 @@ package objectexample2;
 
 import java.io.Serializable;
 
-
+/**
+ * <p>A class example for data objects</p>
+ * <p>The basic thought was like the data a chat bot would need to help someone buy a used car at 2:30 in the morning, or something</p>
+ * @author Chris Francis
+ */
 public class Vehicle implements Serializable, Comparable {
     private String make;
     private String model;
@@ -12,16 +16,29 @@ public class Vehicle implements Serializable, Comparable {
     private String manufacturingPlant;
     private static int vehicleCounter;
 
+    /**
+     * The default constructor, all this does is increment a static counter
+     */
     public Vehicle() {
         this.vehicleCounter++;
     }//end no-arg constructor
 
+    
+    /**
+     * The constructor for a standard make-model query on used cars
+     * @param make <b>String</b> indicating what company manufacutred the car
+     * @param model <b>String</b> the particular design of car
+     */
     public Vehicle(String make, String model) {
         this.make = make;
         this.model = model;
         this.vehicleCounter++;
     }
 
+    /**
+     * a constructor for those who only know what color of car they want
+     * @param color <b>String</b> indicating the desired color
+     */
     public Vehicle(String color) {
         this.color = color;
         this.vehicleCounter++;
@@ -43,6 +60,10 @@ public class Vehicle implements Serializable, Comparable {
         return make;
     }
 
+    /**
+     * a method to change the vehicle manufacturer
+     * @param make String representing the new make of vehicle, for typos in the database
+     */
     public void setMake(String make) {
         this.make = make;
     }
@@ -55,6 +76,11 @@ public class Vehicle implements Serializable, Comparable {
         this.model = model;
     }
 
+    
+    /**
+     * returns the year this particular vehicle was made
+     * @return int showing the year
+     */
     public int getYear() {
         return year;
     }
@@ -92,6 +118,12 @@ public class Vehicle implements Serializable, Comparable {
         return description;
     }
 
+    
+    /**
+     * two vehicles are equal if they have the same make and model
+     * @param obj the other vehicle we want to compare to
+     * @return 
+     */
     @Override
     public boolean equals(Object obj) {
         Vehicle v2 = (Vehicle)obj;

@@ -13,8 +13,8 @@ public class Gorilla extends Animal {
     public Gorilla() {
     }
 
-    public Gorilla(String name, int age, double weight, boolean checkup) {
-        super(name, age, weight, checkup);
+    public Gorilla(String name, int age, double weight, Covering covering, boolean checkup) {
+        super(name, age, weight, covering, checkup);
     }
     
 }

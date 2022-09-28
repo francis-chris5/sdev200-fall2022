@@ -9,8 +9,8 @@ public class Dog extends Animal{
     public Dog() {
     }
 
-    public Dog(String name, int age, double weight, boolean checkup, boolean wearsBandana) {
-        super(name, age, weight, checkup);
+    public Dog(String name, int age, double weight,  Covering covering, boolean checkup, boolean wearsBandana) {
+        super(name, age, weight, covering, checkup);
         this.wearsBandana = wearsBandana;
     }
 

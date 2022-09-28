@@ -7,15 +7,20 @@ public class Animal {
     private int age;
     private double weight;
     private boolean checkup;
+    private Covering covering;
+    private static int animalCounter = 0;
 
     public Animal() {
+        this.animalCounter++;
     }
 
-    public Animal(String name, int age, double weight, boolean checkup) {
+    public Animal(String name, int age, double weight, Covering covering, boolean checkup) {
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.checkup = checkup;
+        this.covering = covering;
+        this.animalCounter++;
     }
 
     public String getName() {
@@ -29,6 +34,20 @@ public class Animal {
     public int getAge() {
         return age;
     }
+
+    public static int getAnimalCounter() {
+        return animalCounter;
+    }
+
+    public Covering getCovering() {
+        return covering;
+    }
+
+    public void setCovering(Covering covering) {
+        this.covering = covering;
+    }
+    
+    
 
     public void setAge(int age) {
         this.age = age;
@@ -52,7 +71,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return this.getName() + " is " + this.getAge() + " years old and weighs " + this.getWeight();
+        return this.getName() + " is " + this.getAge() + " years old and weighs " + this.getWeight() + " and is covered with " + this.getCovering().describe();
     }
 
     @Override
