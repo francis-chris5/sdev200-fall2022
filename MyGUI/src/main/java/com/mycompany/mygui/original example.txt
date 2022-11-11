@@ -1,0 +1,7 @@
+Label lblTemp = new Label("Temporary");
+        Label lblAnother = new Label("Another");
+        
+        HBox hbxContainer = new HBox();
+        hbxContainer.setPadding(new Insets(12, 24, 24, 12));
+        hbxContainer.setSpacing(12);
+        hbxContainer.getChildren().addAll(lblTemp, lblAnother);
