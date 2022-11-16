@@ -21,6 +21,8 @@ import javafx.stage.Stage;
 public class App extends Application {
     
     private File file = new File("testFile.sdev");
+    
+    private Label lblOutput;
 
     @Override
     public void start(Stage stgMain){
@@ -33,8 +35,12 @@ public class App extends Application {
         MenuItem miNew = new MenuItem("New");
         MenuItem miOpen = new MenuItem("Open");
         MenuItem miSave = new MenuItem("Save");
+        Menu more = new Menu("more");
+        MenuItem stuff = new MenuItem("stuff");
         
-        mnFile.getItems().addAll(miNew, miOpen, miSave);
+        more.getItems().addAll(stuff);
+        
+        mnFile.getItems().addAll(miNew, miOpen, miSave, more);
         
         mbMain.getMenus().addAll(mnFile);
         
@@ -43,12 +49,26 @@ public class App extends Application {
         //////////////////////////////////  TOOLBAR
         Button btnNew = new Button("new");
         //btnNew.setGraphic(new ImageView(new Image(this.getClass().getResourceAsStream("new.png"))));
+        btnNew.setOnAction(bc ->{
+            System.out.println(bc);
+            sayHi();
+        });
         
-        Button btnSave = new Button("save");
+        Button btnSave = new Button("open");
+        btnSave.setOnContextMenuRequested(contextMenuEvent -> {
+            System.out.println(contextMenuEvent);
+            sayHi();
+            System.out.println(contextMenuEvent.getTarget());
+        });
         //btnSave.setGraphic(new ImageView(new Image(this.getClass().getResourceAsStream("open.png"))));
         
-        Button btnOpen = new Button("open");
+        Button btnOpen = new Button("save");
         //btnOpen.setGraphic(new ImageView(new Image(this.getClass().getResourceAsStream("save.png"))));
+        btnOpen.setOnMouseEntered(e -> {
+            System.out.println(e);
+            sayHi();
+        });
+        
         
         
         HBox hbxToolbar = new HBox();
@@ -59,6 +79,7 @@ public class App extends Application {
         
         //////////////////////////////////  MAIN CONTENT
         
+        lblOutput = new Label("");
         
         
         ///////////////////////////////////  STATUS
@@ -74,12 +95,24 @@ public class App extends Application {
         
         BorderPane bpMain = new BorderPane();
         bpMain.setTop(vbxMainControls);
+        bpMain.setCenter(lblOutput);
         bpMain.setBottom(hbxStatus);
         Scene scnMain = new Scene(bpMain, 720, 480);
         
         stgMain.setScene(scnMain);
         stgMain.setTitle("class example: " + file.getName() );
         stgMain.show();
+    }
+    
+    
+    
+    public void sayHi(){
+        if(lblOutput.getText() == ""){
+            lblOutput.setText("Hello World");
+        }
+        else{
+            lblOutput.setText("");
+        }
     }
     
     
