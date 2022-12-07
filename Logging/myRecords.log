@@ -1,0 +1,36 @@
+Dec 06, 2022 6:32:20 PM logging.Logging main
+INFO: printed some stuff to the console
+Dec 06, 2022 6:32:20 PM logging.Logging main
+INFO: made a linked list
+Dec 06, 2022 6:32:20 PM logging.Logging main
+INFO: added 3 to the list
+Dec 06, 2022 6:32:20 PM logging.Logging main
+INFO: added 7 to the list
+Dec 06, 2022 6:32:20 PM logging.Logging main
+WARNING: testing the log warnings
+Dec 06, 2022 6:32:20 PM logging.Logging main
+SEVERE: testing the log severes
+Dec 06, 2022 6:44:13 PM logging.Logging main
+INFO: printed some stuff to the console
+Dec 06, 2022 6:44:13 PM logging.Logging main
+INFO: made a linked list
+Dec 06, 2022 6:44:13 PM logging.Logging main
+INFO: added 3 to the list
+Dec 06, 2022 6:44:13 PM logging.Logging main
+INFO: added 7 to the list
+Dec 06, 2022 6:44:13 PM logging.Logging main
+WARNING: testing the log warnings
+Dec 06, 2022 6:44:13 PM logging.Logging main
+SEVERE: testing the log severes
+Dec 06, 2022 6:45:40 PM logging.Logging main
+INFO: printed some stuff to the console
+Dec 06, 2022 6:45:40 PM logging.Logging main
+INFO: made a linked list
+Dec 06, 2022 6:45:40 PM logging.Logging main
+INFO: added 3 to the list
+Dec 06, 2022 6:45:40 PM logging.Logging main
+INFO: added 7 to the list
+Dec 06, 2022 6:45:40 PM logging.Logging main
+WARNING: testing the log warnings
+Dec 06, 2022 6:45:40 PM logging.Logging main
+SEVERE: testing the log severes
